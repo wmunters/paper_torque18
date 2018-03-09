@@ -33,7 +33,7 @@ methodology can be found in Refs. \cite{goit, munters, muntersenergies}. Figure 
 \ref{fig:meth}a illustrates the control block diagram: the wind-farm control vector $\blds{\varphi}(t)$ is optimized until a set of optimal control
 $\blds{\varphi}^{\bullet}(t)$ is found. The wind-farm flow model consists of a turbulence-resolving LES and the gradient of the 
 cost functional $\J$ (i.e. the total wind-farm power) is evaluated using the continuous adjoint formulation of the LES system. In this way,
-\emph{a priori} simplification of the representation of the boundary layer and turbine wakes is avoided as much as possible, and control signals can
+\emph{a priori} simplification of the representation of the boundary layer and turbine wakes are avoided as much as possible, and control signals can
 be designed to tap into the unsteady dynamics of the turbulent flow.
 
 \begin{figure}
@@ -63,7 +63,7 @@ operation is optimized by solving the following constrained optimization problem
 with system states $\bolds{q}(\bolds{x},t) = [\ufilt(\bolds{x},t),\ \ptilde(\bolds{x},t),\ \ctnhat{1}(t), \dots, \ctnhat{N_t}(t), \theta_1(t), \dots,
 \theta_{N_t}(t)]$ and controls $\bolds{\varphi}(t)~=~[\ctn{1}(t), \dots, \ctn{N_t}(t), \omega_1(t), \dots, \omega_{N_t}(t)]$. State equations
 (\ref{eq:NSmomentum_constraint} -- \ref{eq:NScontinuity_constraint}) are the filtered Navier--Stokes equations modeling the turbulent wind-farm
-boundary layer, which are discretized with a mixed spectral--finite difference in space and a fourth order explicit Runge Kutta schemes in time. 
+boundary layer, which are discretized with a mixed spectral--finite difference method in space and a fourth order explicit Runge Kutta scheme in time. 
 In these equations, $\ufilt$ and $\ptilde$ are the filtered velocity and pressure respectively. Further, $\nabla \ptilde_\infty$ is the driving background pressure gradient and $\bolds{\tau}_{\rm sgs}$ is the subgrid-scale stress tensor. The thrust force $\bolds{f}_i$ enacted on the flow by each turbine $i$ is modeled using an actuator disk approach as 
 %\begin{equation}
 $\bolds{f}_i = \frac{1}{2} \ctihat V_i^2 \R_i \eperpi$,
