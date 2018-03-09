@@ -79,7 +79,7 @@ spacing arrangement is considered, with axial and transversal spacings of $S_T =
 farms are simulated with a resolution of $26 \times 14 \times 6.9$ m$^3$ on domains of size $10 \times 3.6 \times 1$ km$^3$ and $7.5 \times 3.6 \times 1$ km$^3$,
 hence resulting in simulation grids of $384 \times 256 \times 144$ and $288 \times 256 \times 144$ respectively in axial, transversal and vertical
 directions. Inflow conditions are the same for all simulation cases and are generated in a separate precursor domain with shifted periodic boundary
-conditions \cite{muntersshift} in which a driving pressure gradient of $\nabla \ptilde_\infty / \rho = 2.5 \times 10^{-4}$ m s$^{-2}$ results in a
+conditions \cite{munterspof} in which a driving pressure gradient of $\nabla \ptilde_\infty / \rho = 2.5 \times 10^{-4}$ m s$^{-2}$ results in a
 free-stream velocity $U_\infty \approx 8.5 $ m s$^{-1}$ at hub height. Simulations are advanced in time with a constant timestep of $\Delta t = 0.75$ s. 
 
 \begin{figure}
@@ -95,8 +95,8 @@ and 3, a yaw control case (Y), in which turbines can yaw at a maximum rate of $\
 rate \commwim{ADDREF}) with $C_T' = 2$, and a combined induction--yaw control case (IY), with $0 \leq C_T' \leq 3$ and $\omega_{\rm max} = 0.3^\circ/$s. 
 
 The wind-farm flow fields are simulated over a total time of 18 minutes, consisting of 9 optimization windows with $T = 240$ s (approximately the advection time between 4 turbine rows of layout $A_W$) and $T_A = T/2 = 120$ s.
-The {L--BFGS--B} algorithm is performed for a maximum amount of 80 iterations within each optimization window (see below). 
-For all time-averaged results shown below, the first two windows are omitted to compensate for startup effects due to wake propagation.
+The {L--BFGS--B} algorithm is performed for a maximum amount of 80 iterations within each optimization window (see below). The first 
+For all time-averaged results shown below, the first two windows are omitted to avoid start-up effects due to wake propagation in the averages.
 
 \section{Simulation Results}\label{sec:results}
 The current section discusses the simulation results of the optimal control cases defined in the previous section. Firstly, the choice of the maximum
@@ -236,6 +236,7 @@ The authors acknowledge funding by the European Research Council (ActiveWindFarm
 	\bibitem{munterswes} W. Munters, J. Meyers 2018, `Towards practical dynamic induction control of wind farms: analysis of optimally controlled wind-farm boundary layers and sinusoidal induction control of first-row turbines', Wind Energ. Sci. Discuss., in review, 2018. 
 	\bibitem{muntersenergies} W. Munters, J. Meyers 2018, `Dynamic Strategies for Yaw and Induction Control of Wind Farms Based on Large-Eddy Simulation and Optimization', Energies 11(1), 177
 	\bibitem{byrd} H. R. Byrd, , P. Lu, J. Nocedal, C. Zhu 1995. `A limited memory algorithm for bound constrained optimization.' SIAM Journal on Scientific Computing 16(5), 1190-1208
+	\bibitem{munterspof} W. Munters, C. Meneveau, J. Meyers 2016. `Shifted periodic boundary conditions for simulations of wall-bounded turbulent flows' Phys Fluids 28(2), 025112
 \end{thebibliography}
 
 \end{document}
